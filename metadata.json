@@ -1,0 +1,8 @@
+{
+  "name": "Fashion inifity",
+  "description": "Virtual Try-On Studio powered by Gemini 2.5 and Neural CV Grounding.",
+  "entry_point": "index.html",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

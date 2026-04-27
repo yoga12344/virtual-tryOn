@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wealth-emerald: #50C878;
+  --wealth-forest: #004B3B;
+  --wealth-depth: #0B3D2E;
+  --midnight-void: #020605;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--midnight-void);
+  color: #f0fdf4;
+  overflow-x: hidden;
+}
+
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+.glass {
+  background: rgba(11, 61, 46, 0.2);
+  backdrop-filter: blur(28px);
+  border: 1px solid rgba(80, 200, 120, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--wealth-emerald), var(--wealth-forest), var(--wealth-depth));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.emerald-glow {
+  box-shadow: 0 0 30px rgba(80, 200, 120, 0.2);
+}
+
+@keyframes float-luxury {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.4; }
+  33% { transform: translate(8vw, 10vh) scale(1.1) rotate(5deg); opacity: 0.6; }
+  66% { transform: translate(-4vw, 20vh) scale(0.95) rotate(-5deg); opacity: 0.3; }
+}
+
+@keyframes neural-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.02); }
+}
+
+.animate-float-luxury-1 { animation: float-luxury 30s infinite ease-in-out; }
+.animate-float-luxury-2 { animation: float-luxury 40s infinite ease-in-out reverse; }
+
+.bg-luxury-grain {
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  background-repeat: repeat;
+  opacity: 0.03;
+}
+
+.bg-neural-grid {
+  background-image: 
+    linear-gradient(rgba(80, 200, 120, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 200, 120, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 5px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(80, 200, 120, 0.2);
+  border-radius: 20px;
+}
